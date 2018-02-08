@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Vision Processing Web Tool</title>
+    <link rel="stylesheet" href="static/css/materialize.min.css">
+    <link rel="stylesheet" href="static/css/material-icons.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/libs/jquery-2.2.4.min.js"></script>
+    <script src="static/js/libs/jquery-ui.js"></script>
+    <script src="static/js/libs/materialize.min.js"></script>
+    <script src="static/js/dropzone.js"></script>
+    <script src="static/js/index.js"></script>
+    <style>
+        .selectable .ui-selecting {
+            background: #FECA40;
+            background-position-x: 50%;
+            background-size: cover;
+        }
+        
+        .selectable .ui-selected {
+            background: #66BB6A;
+            background-position-x: 50%;
+            background-size: cover;
+        }
+        
+        .selectable {
+            list-style-type: none;
+        }
+        
+        .selectable li {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper black">
+                <a href="/" class="brand-logo">Vision Processing - Summary</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">+</i></a>
+            </div>
+        </nav>
+    </div>
+    <div class="containter">
+        <div class="row">
+            <div class="col s12 m5">
+                <div class="card-panel teal">
+                    {% for key, value in data.iteritems() %}
+                    <span class="white-text">{{ key }}: {{ value }}</span><br />{% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

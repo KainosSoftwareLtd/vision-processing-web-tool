@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <title>Vision Processing Web Tool</title>
+    <link rel="stylesheet" href="static/css/materialize.min.css">
+    <link rel="stylesheet" href="static/css/material-icons.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/libs/jquery-2.2.4.min.js"></script>
+    <script src="static/js/libs/jquery-ui.js"></script>
+    <script src="static/js/libs/materialize.min.js"></script>
+    <script src="static/js/dropzone.js"></script>
+    <script src="static/js/index.js"></script>
+    <script>
+        function postTags() {
+            console.log('posting tags');
+            var tag = $("#itemsTag").val();
+            var itemIds = [];
+            var selected = $(".ui-selected");
+            for (var i = 0; i < selected.length; i++) {
+                if (selected[i].firstElementChild) {
+                    itemIds.push(selected[i].firstElementChild.id);
+                }
+            }
+            var data = {
+                'tag': tag,
+                'ids': itemIds
+            }
+            $.post('/tag', data)
+            console.log('finished posting tags');
+        }
+
+        function deleteSelected() {
+            console.log('deleting items');
+            var itemIds = [];
+            var selected = $(".ui-selected");
+            for (var i = 0; i < selected.length; i++) {
+                if (selected[i].firstElementChild) {
+                    itemIds.push(selected[i].firstElementChild.id);
+                }
+            }
+            var data = {
+                'ids': itemIds
+            }
+            $.post('/delete', data)
+            console.log('finished deleting items');
+        }
+
+        function untag() {
+            console.log('untagging items');
+            var itemIds = [];
+            var selected = $(".ui-selected");
+            for (var i = 0; i < selected.length; i++) {
+                if (selected[i].firstElementChild) {
+                    itemIds.push(selected[i].firstElementChild.id);
+                }
+            }
+            var data = {
+                'tag': 'untagged',
+                'ids': itemIds
+            }
+            $.post('/tag', data)
+            console.log('finished untagging items');
+        }
+    </script>
+    <style>
+        .selectable .ui-selecting {
+            background: #FECA40;
+            background-position-x: 50%;
+            background-size: cover;
+        }
+        
+        .selectable .ui-selected {
+            background: #66BB6A;
+            background-position-x: 50%;
+            background-size: cover;
+        }
+        
+        .selectable {
+            list-style-type: none;
+        }
+        
+        .selectable li {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper black">
+                <a href="#!" class="brand-logo">Vision Processing - Suggested Tags</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">+</i></a>
+                <ul class="right">
+                    <li><a href="#" onclick="deleteSelected(); location.reload()"><i class="large material-icons">thumb_up</i></a></li>
+                    <li><a href="#" onclick="deleteSelected(); location.reload()"><i class="large material-icons">thumb_down</i></a></li>
+                    <li><a href="#" onclick="event.preventDefault(); $('.selectable .ui-selected').removeClass('ui-selected')">Unselect all</a></li>
+                    <li><a href="/">Done</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="containter">
+        <div class="row" id="upload-area" style="display:none">
+            <div class="col s12 m12">
+                <div class="card-panel green lighten-3 white-text">
+                    <center>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="file[]" multiple>
+                            <input type="submit" class="btn">
+                        </form>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="photos">
+            {% for label in labels_json %}
+            <div class="col s12 m12">
+                <div class="card-panel white z-depth-0">
+                    <center>
+                        <h2>{{ label.name }}</h2>
+                        <ol class="selectable">
+                            {% for item in label['items'] %}
+                            <li class="ui-state-default"><img id="{{item.id}}" style="background-image:url({{item}});"></li>
+                            {% endfor %}
+                        </ol>
+                    </center>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div id="tagModal" class="modal">
+            <div class="modal-content">
+                <h4>Tag images</h4>
+                <form onsubmit="postTags()">
+                    <div class="row">
+                        <div class="col s12">
+                            Enter a tag associated to these images:
+                            <div class="input-field inline">
+                                <input id="itemsTag" type="text" class="validate">
+                                <label for="itemsTag" data-error="wrong" data-success="right">Tag</label>
+                            </div>
+                            <a href="/" onclick="postTags()">Submit</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+            $("div#dropzone").dropzone({
+                url: "/file/post"
+            });
+            $(".selectable").selectable();
+            $('.modal').modal();
+        });
+    </script>
+</body>
+
+</html>

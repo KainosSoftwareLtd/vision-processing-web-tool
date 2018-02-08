@@ -1,0 +1,252 @@
+<html>
+
+<head>
+    <title>Vision Processing Web Tool</title>
+    <link rel="stylesheet" href="static/css/materialize.min.css">
+    <link rel="stylesheet" href="static/css/material-icons.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/libs/jquery-2.2.4.min.js"></script>
+    <script src="static/js/libs/jquery-ui.js"></script>
+    <script src="static/js/libs/materialize.min.js"></script>
+    <script src="static/js/dropzone.js"></script>
+    <script src="static/js/index.js"></script>
+    <script>
+        function postTags() {
+            console.log('posting tags');
+            var tag = $("#itemsTag").val();
+            var itemIds = [];
+            var selected = $(".ui-selected");
+            console.log(selected.length);
+            for (var i = 0; i < selected.length; i++) {
+                if (selected[i].firstElementChild) {
+                    itemIds.push(selected[i].firstElementChild.id);
+                    console.log(selected[i].firstElementChild.id)
+                }
+            }
+            console.log(tag);
+            console.log(itemsIds[1]);
+            var data = {
+                'tag': tag,
+                'ids': itemIds
+            }
+            $.post('/tag', data)
+            console.log('finished posting tags');
+        }
+
+        function deleteSelected() {
+            console.log('deleting items');
+            var itemIds = [];
+            var selected = $(".ui-selected");
+            for (var i = 0; i < selected.length; i++) {
+                if (selected[i].firstElementChild) {
+                    itemIds.push(selected[i].firstElementChild.id);
+                }
+            }
+            var data = {
+                'tag': 'toDelete',
+                'ids': itemIds
+            }
+            $.post('/tag', data)
+
+            var data2 = {
+                'ids': itemIds
+            }
+            $.post('/delete', data2)
+            console.log('finished deleting items');
+        }
+
+        function untag() {
+            console.log('untagging items');
+            var itemIds = [];
+            var selected = $(".ui-selected");
+            for (var i = 0; i < selected.length; i++) {
+                if (selected[i].firstElementChild) {
+                    itemIds.push(selected[i].firstElementChild.id);
+                }
+            }
+            var data = {
+                'tag': 'untagged',
+                'ids': itemIds
+            }
+            $.post('/tag', data)
+            console.log('finished untagging items');
+            document.location.reload(true);
+        }
+
+        function selectAll() {
+            $('.ui-state-default .ui-selectee').addClass('ui-selected')
+            $('.ui-selectee').addClass('ui-selected');
+        }
+    </script>
+    <style>
+        .selectable .ui-selecting {
+            background: #FECA40;
+            background-position-x: 50%;
+            background-size: cover;
+        }
+        
+        .selectable .ui-selected {
+            background: #66BB6A;
+            background-position-x: 50%;
+            background-size: cover;
+        }
+        
+        .selectable {
+            list-style-type: none;
+        }
+        
+        .selectable li {
+            float: left;
+        }
+    </style>
+    <script>
+        function request_training() {
+            $('#trainingModal').modal('open');
+            $.get('/train')
+                .always(function() {
+                    $('#trainingModal').modal('close');
+                });
+        }
+
+        function request_predictions() {
+            var selected = $(".ui-selected");
+            var items = [];
+            for (var i = 0; i < selected.length; i++) {
+                console.log(i);
+                console.log(selected[i].firstElementChild);
+                if (selected[i].firstElementChild) {
+                    if (selected[i].firstElementChild.style) {
+                        items.push(selected[i].firstElementChild.style['backgroundImage'].split('"')[1]);
+                    }
+                }
+            }
+            var data = {
+                'items': items
+            };
+            $.post('/classify', data).done(function(response) {
+                document.write(response);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <ul id="manage-photos-dropdown" class="dropdown-content">
+            <li><a href="#uploadModal">Upload</a></li>
+            <li class="divider"></li>
+            <li><a href="#!" onclick="untag()">Untag selected</a></li>
+            <li><a href="#!" onclick="selectAll(); untag(); ">Untag all</a></li>
+            <!--<li><a href="#!" onclick="deleteSelected()">Delete selected images</a></li>-->
+        </ul>
+        <ul id="vision-processing-dropdown" class="dropdown-content">
+            <li><a href="#tagModal">Tag selected images</a></li>
+            <li><a href="#!" onclick="request_training()">Train model</a></li>
+            <li><a href="#!" onclick="request_predictions()">Predict tags of selected images</a></li>
+            <li class="divider"></li>
+            <li><a href="/all">All tags</a></li>
+            <li><a href="#!" onclick="alert('Go to /?tag=<tag name>')">Go to tag</a></li>
+            <li><a href="/summary">Tag summary</a></li>
+        </ul>
+        <ul id="selection-dropdown" class="dropdown-content">
+            <li><a href="#!" onclick="selectAll()">Select all images</a></li>
+            <li><a href="#!" onclick="$('.selectable .ui-selected').removeClass('ui-selected')">Unselect all</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper black">
+                <a href="#!" class="brand-logo">Vision Processing - Manually Tag Items</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-button" href="#!" data-activates="manage-photos-dropdown">Manage Photos  &#x25BC;</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="vision-processing-dropdown">Vision Processing  &#x25BC;</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="selection-dropdown">Selection  &#x25BC;</a></li>  
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="containter">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="right">
+                    {% if(num_pages > 0 and page_num > 1) %} <a href="/?page={{ page_num-1 }}">Previous</a> {% endif %}
+                    <p>Page {{ page_num }} of {{ num_pages }}</p>
+                    {% if(num_pages > 0 and page_num < num_pages) %} <a href="/?page={{ page_num+1 }}">Next</a>
+                        {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="row" id="photos">
+            {% for label in labels_json %}
+            <div class="col s12 m12">
+                <div class="card-panel white z-depth-0">
+                    <center>
+                        <h2>{{ label.name }}</h2>
+                        <ol class="selectable">
+                            {% for item in label['items'] %}
+                            <li class="ui-state-default"><img id="{{item.id}}" style="background-image:url({{item.image_url}});"></li>
+                            {% endfor %}
+                        </ol>
+                    </center>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div id="tagModal" class="modal">
+            <div class="modal-content">
+                <h4>Tag images</h4>
+                <form onsubmit="postTags()">
+                    <div class="row">
+                        <div class="col s12">
+                            Enter a tag associated to these images:
+                            <div class="input-field inline">
+                                <input id="itemsTag" type="text" class="validate">
+                                <label for="itemsTag" data-error="wrong" data-success="right">Tag</label>
+                            </div>
+                            <a href="/" onclick='postTags()'>Submit</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="uploadModal" class="modal">
+            <div class="modal-content">
+                <h4>Upload images</h4>
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file[]" multiple>
+                    <input type="submit" class="btn">
+                </form>
+            </div>
+        </div>
+        <div id="trainingModal" class="modal">
+            <div class="modal-content">
+                <h4>Training model...</h4>
+                <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="right">
+                    {% if(num_pages > 0 and page_num > 1) %} <a href="/?page={{ page_num-1 }}">Previous</a> {% endif %}
+                    <p>Page {{ page_num }} of {{ num_pages }}</p>
+                    {% if(num_pages > 0 and page_num
+                    < num_pages) %} <a href="/?page={{ page_num+1 }}">Next</a>
+                        {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+            $("div#dropzone").dropzone({
+                url: "/file/post"
+            });
+            $(".selectable").selectable();
+            $('.modal').modal();
+            $(".dropdown-button").dropdown();
+        });
+    </script>
+</body>
+
+</html>

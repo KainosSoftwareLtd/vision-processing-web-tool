@@ -1,0 +1,7 @@
+a) in vision processing tool folder (parent)
+b) virtualenv 'vision-tool'
+c) source 'vision-tool/bin/activate'
+d) cd to web-app
+e) pip install -r requirements.txt
+f) python app.py
+
