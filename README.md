@@ -56,3 +56,6 @@ Adding data
 - Get the dataset you want to use in the virtual machine
 - From there you can upload them on the website to append them
 - However, if you need to add a lot of images at once put them in the directory /web-app/static/images/uploads/untagged
+
+Tip:
+Make sure your images have different names - we use the name as an ID!
