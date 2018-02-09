@@ -6,6 +6,7 @@ So, you want to use the Kainos computer vision tool to do some detection in your
 
 If you get stuck, feel free to grab Jordan McDonald (I will be floating around) to get some help.
 
+
 **Pre-requisites**
 
 1. Download Oracle Virtualbox and its extension from [here](https://www.virtualbox.org/wiki/Downloads) 
@@ -35,6 +36,7 @@ If you get stuck, feel free to grab Jordan McDonald (I will be floating around) 
       a. &#39;git clone https://github.com/KainosSoftwareLtd/vision-processing-web-tool.git&#39;
 
 _Like magic, you have the tool on your virtual machine!_
+
 
 **Project Setup**
 
