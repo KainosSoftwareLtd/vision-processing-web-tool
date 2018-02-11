@@ -20,12 +20,11 @@ def get_items():
         }
 
         items_list = glob.glob(label + '/*')
-        types = ('.png', '.jpg', '.jpeg')
 
         if len(items_list) > 0:
             for item in items_list:   
                 item_object = {
-                    'id': item.split('/')[-1].split(types)[0],
+                    'id': item.split('/')[-1].split('.png | .jpeg | .jpeg')[0],
                     'image_url': item
                 }
                 label_object['items'].append(item_object)
