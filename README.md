@@ -33,7 +33,7 @@ If you get stuck, feel free to grab Jordan McDonald (I will be floating around) 
       
 6. Now that that&#39;s set up you can clone the repo into the virtual machine (in the command line!)
 
-      a. &#39;git clone https://github.com/KainosSoftwareLtd/vision-processing-web-tool.git&#39;
+      a. &#39;git clone https://github.com/KainosSoftwareLtd/vision-processing-web-tool.git&#39'
 
 _Like magic, you have the tool on your virtual machine!_
 
