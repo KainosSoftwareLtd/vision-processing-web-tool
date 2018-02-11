@@ -73,3 +73,4 @@ The images when trained will be split in training and validation sets.
 4. If you dont need the VM / have experience handling python depedencies, feel free not to use it! :)
 5. machine-learning.py is where you can tweak the key ML components (epochs etc)
 6. the algorithm chosen is a 'binary_crossentropy' so if using > 2 labels - then switch this to something suited to this.
+7. ensure you change the 'settings.py' files size inputs to be as close as possible to the input (while maintaining a square)
