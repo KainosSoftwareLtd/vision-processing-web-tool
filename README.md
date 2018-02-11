@@ -66,4 +66,6 @@ _Like magic, you have the tool on your virtual machine!_
 - webapp/tensorflow_images/split/training
 - webapp/tensorflow_images/split/validation
 
+The images when trained will be split in training and validation sets.
 
+3. If you want to change the tool, please create a new branch and dont merge into master (keep this clean for everyones benefit)
