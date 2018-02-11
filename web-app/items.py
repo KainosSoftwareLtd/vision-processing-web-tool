@@ -24,7 +24,7 @@ def get_items():
         if len(items_list) > 0:
             for item in items_list:   
                 item_object = {
-                    'id': item.split('/')[-1].split('.png | .jpeg | .jpeg')[0],
+                    'id': item.split('/')[-1].split('.png | .jpeg | .jpg')[0],
                     'image_url': item
                 }
                 label_object['items'].append(item_object)
@@ -42,7 +42,9 @@ def process_tags(data):
         os.makedirs(path)
     for item in data['ids[]']:
         print 'Moving item ' + item
-        old_item_path = helpers.find(item + '.*', settings.upload_folder)
+        # old_item_path = helpers.find(item + '.*', settings.upload_folder)
+        old_item_path = helpers.find(item, settings.upload_folder)
+        # old_item_path = settings.upload_folder + item;
         new_item_path = path + old_item_path.split('/')[-1]
         os.rename(old_item_path, new_item_path)
 
