@@ -69,3 +69,4 @@ _Like magic, you have the tool on your virtual machine!_
 The images when trained will be split in training and validation sets.
 
 3. If you want to change the tool, please create a new branch and dont merge into master (keep this clean for everyones benefit)
+4. If you dont need the VM / have experience handling python depedencies, feel free not to use it! :)
