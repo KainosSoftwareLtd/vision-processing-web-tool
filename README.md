@@ -51,11 +51,19 @@ _Like magic, you have the tool on your virtual machine!_
 6. On your browser of choice go to localhost:5000 to get to the web app
 7. After you&#39;ve opened the web app you can select images, tag them and train your own machine learning model and test it yourself!
 
-Adding data
+**Adding data**
 
 - Get the dataset you want to use in the virtual machine
 - From there you can upload them on the website to append them
 - However, if you need to add a lot of images at once put them in the directory /web-app/static/images/uploads/untagged
 
-Tip:
-Make sure your images have different names - we use the name as an ID!
+**Tips**
+1. Make sure your images have different names - we use the name as an ID!
+2. To 'reset' and delete all the images / tags you will need delete the named tags (not the untagged folder) in these directories.
+
+webapp/static/images/uploads
+webapp/tensorflow_images/master
+webapp/tensorflow_images/split/training
+webapp/tensorflow_images/split/validation
+
+
