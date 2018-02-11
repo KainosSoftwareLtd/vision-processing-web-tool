@@ -61,9 +61,9 @@ _Like magic, you have the tool on your virtual machine!_
 1. Make sure your images have different names - we use the name as an ID!
 2. To 'reset' and delete all the images / tags you will need delete the named tags (not the untagged folder) in these directories.
 
-webapp/static/images/uploads
-webapp/tensorflow_images/master
-webapp/tensorflow_images/split/training
-webapp/tensorflow_images/split/validation
+- webapp/static/images/uploads
+- webapp/tensorflow_images/master
+- webapp/tensorflow_images/split/training
+- webapp/tensorflow_images/split/validation
 
 
