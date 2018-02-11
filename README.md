@@ -42,14 +42,15 @@ _Like magic, you have the tool on your virtual machine!_
 
 1. With the repo cloned you&#39;ll need to change directory into vision-processing-web-tool
 2. Set up a virtual environment to work in using the command &#39;virtualenv vision-processing&#39; in the terminal.
-3. Change directory into web-app and run &#39;pip install –r requirements.txt&#39;
+3. activate the virtual environment (see read me in foler if unsure)
+4. Change directory into web-app and run &#39;pip install –r requirements.txt&#39;
   
       a. This grabs our dependencies
   
-4. Once that&#39;s done you can run the app with &#39;python app.py&#39;
-5. I&#39;d recommend downloading chromium to view the web app
-6. On your browser of choice go to localhost:5000 to get to the web app
-7. After you&#39;ve opened the web app you can select images, tag them and train your own machine learning model and test it yourself!
+5. Once that&#39;s done you can run the app with &#39;python app.py&#39;
+6. I&#39;d recommend downloading chromium to view the web app
+7. On your browser of choice go to localhost:5000 to get to the web app
+8. After you&#39;ve opened the web app you can select images, tag them and train your own machine learning model and test it yourself!
 
 **Adding data**
 
