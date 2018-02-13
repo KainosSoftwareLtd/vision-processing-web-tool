@@ -72,6 +72,7 @@ Download QGIS -> https://qgis.org/en/site/forusers/download.html
 
 3. Change the output file format to be a jpeg 2000 - drag your selection on the map itself and click okay when satisfied - this will split the larger image into one chip which can be used as part of a dataset.
 
+!["How to crop a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.24.07.png?raw=true)
 
 **Tips**
 1. Make sure your images have different names - we use the name as an ID!
