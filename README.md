@@ -58,6 +58,8 @@ _Like magic, you have the tool on your virtual machine!_
 - From there you can upload them on the website to append them
 - However, if you need to add a lot of images at once put them in the directory /web-app/static/images/uploads/untagged
 
+**Note: The base dataset we provide can ONLY be opened in QGIS - ask Jordan for guidance is unsure**
+
 **Tips**
 1. Make sure your images have different names - we use the name as an ID!
 2. To 'reset' and delete all the images / tags you will need delete the named tags (not the untagged folder) in these directories.
