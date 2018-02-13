@@ -60,6 +60,18 @@ _Like magic, you have the tool on your virtual machine!_
 
 **Note: The base dataset we provide can ONLY be opened in QGIS - ask Jordan for guidance is unsure**
 
+**How to chop a large satelite image into a dataset:**
+
+Download QGIS -> https://qgis.org/en/site/forusers/download.html
+
+1. Load your image into QGIS
+
+
+2. On the tool bar click on Raster - extraction - clipper.
+
+3. Change the output file format to be a jpeg 2000 - drag your selection on the map itself and click okay when satisfied - this will split the larger image into one chip which can be used as part of a dataset.
+
+
 **Tips**
 1. Make sure your images have different names - we use the name as an ID!
 2. To 'reset' and delete all the images / tags you will need delete the named tags (not the untagged folder) in these directories.
