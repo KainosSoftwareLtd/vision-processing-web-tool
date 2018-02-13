@@ -66,6 +66,7 @@ Download QGIS -> https://qgis.org/en/site/forusers/download.html
 
 1. Load your image into QGIS
 
+!["How to open a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.15.48.png?raw=true)
 
 2. On the tool bar click on Raster - extraction - clipper.
 
