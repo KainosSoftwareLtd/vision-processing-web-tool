@@ -92,3 +92,4 @@ The images when trained will be split in training and validation sets.
 7. ensure you change the 'settings.py' files size inputs to be as close as possible to the input (while maintaining a square)
 8. In preprocessing we rescale inputs to between 0-1 for all pixel values - this is a great explanation why its useful - https://www.linkedin.com/pulse/keras-image-preprocessing-scaling-pixels-training-adwin-jahn/
 9. Keras handles the CNN part of the code - if you see some weird quirks, please do upgrade using pip in the venv.
+10. I recommend using QGIS outside of the VM to avoid loading large images into memory - leverage the VM as a means to use the vision processing tool.
