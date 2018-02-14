@@ -85,9 +85,21 @@ MORE TO ADD
 
 1. For Window it seems to be a fair bit simpler - it provides a few installers - select whatever one you feel is appropriate, typically this is the 64bit installer.
 
+_Hooray! you are now able to open any of the images in the space dataset and start creating your dataset! Ask Jordan McDonald if you need any help :)_
 
-Hooray! you are now able to open any of the images in the space dataset and start creating your dataset! Ask Jordan McDonald if you need any help :)
+## QGIS: Dataset Prep Basics
 
+You can only open the space images with a tool like QGIS - previews wont work as the image will reference the XML file associated as a pair
+
+1. Load your image into QGIS
+
+!["How to open a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.15.48.png?raw=true)
+
+2. On the tool bar click on Raster - extraction - clipper.
+
+3. Change the output file format to be a jpeg 2000 - drag your selection on the map itself and click okay when satisfied - this will split the larger image into one chip which can be used as part of a dataset.
+
+!["How to crop a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.24.07.png?raw=true)
 
 At this stage an assumption will be made that you have the repository cloned in whatever permutation you prefer (VM / no VM)
 
@@ -111,24 +123,8 @@ At this stage an assumption will be made that you have the repository cloned in 
 - From there you can upload them on the website to append them
 - However, if you need to add a lot of images at once put them in the directory /web-app/static/images/uploads/untagged
 
-**Note: The base dataset we provide can ONLY be opened in QGIS - ask Jordan for guidance is unsure**
-
-**How to chop a large satelite image into a dataset:**
-
-Download QGIS -> https://qgis.org/en/site/forusers/download.html
-
-1. Load your image into QGIS
-
-!["How to open a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.15.48.png?raw=true)
-
-2. On the tool bar click on Raster - extraction - clipper.
-
-3. Change the output file format to be a jpeg 2000 - drag your selection on the map itself and click okay when satisfied - this will split the larger image into one chip which can be used as part of a dataset.
-
-!["How to crop a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.24.07.png?raw=true)
-
 **Tips**
-1. Make sure your images have different names - we use the name as an ID!
+1. Make sure your images have different names - we use the name as an ID (for the visoon too!
 2. To 'reset' and delete all the images / tags you will need delete the named tags (not the untagged folder) in these directories.
 
 - webapp/static/images/uploads
