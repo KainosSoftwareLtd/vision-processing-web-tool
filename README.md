@@ -71,12 +71,22 @@ QGIS is a great tool for loading the airbus dataset and performing the processin
 
 1. from the QGIS download page it will redirect you to another web page where you can download the tool.
 
-      ![](https://i.imgur.com/VM8tRFP.png)
+      ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-14%20at%2016.47.24.png)
 
-2. 
+2. Double click on the download file - this folder will be opened.
+
+      ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-14%20at%2016.50.52.png)
+      
+3. Add more here...
+
+MORE TO ADD
 
 **Windows**
 
+1. For Window it seems to be a fair bit simpler - it provides a few installers - select whatever one you feel is appropriate, typically this is the 64bit installer.
+
+
+Hooray! you are now able to open any of the images in the space dataset and start creating your dataset! Ask Jordan McDonald if you need any help :)
 
 
 At this stage an assumption will be made that you have the repository cloned in whatever permutation you prefer (VM / no VM)
