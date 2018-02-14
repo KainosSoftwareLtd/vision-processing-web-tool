@@ -13,28 +13,41 @@ If you get stuck, feel free to grab Jordan McDonald (He will be floating around)
 
       a. This will host our virtual machine (so you don&#39;t have to deal with pesky dependencies!) 
       
-      b. Ensure you have free hard drive space (30gb)
+      b. Go ahead and install it (should be pretty straight forward!)
       
 2. Once you have it installed, download the Virtual machine image from here - ADD HERE.
 
 3. Download QGIS from [here] (https://qgis.org/en/site/forusers/download.html)
 
+      a. This is for viewing and cropping the dataset (recommended to do this outside the VM to avoid memory / storage issues)
+
 4. Download the Airbus dataset from here - ADD HERE
+
+      a. As mentioned above its recommended to do your dataset processing outside of the VM
+      
+      b. You can upload a processed dataset to the likes and Google drive and then download in the VM when you need the tool.
+      
+      c. Inside the dataset is a read me describing the strcture of the data - each image is connected to an XML file which           contains the coordinate information - they come as a pair, so keep the images and XML together.
 
 
 Once you have all these things downloaded, lets focus on getting each of them setup - if you are confident in handling python dependencies feel free to ignore using the virtual machine and clone this repository directly.
 
-Installing the virtual machine
+## Installing the virtual machine
 
+This section will take you through installing the virtual machine which will host the Kainos vision processing tool (good option if you are not familiar with handling Python dependencies)
 
+1. Open VirtualBox
 
-3. Open the image with Virtual Box 
+2. Open the image with Virtual Box 
 
       a. File – Import Appliance – then select your downloaded VM
       
-      b. Double click on the new appliance to start the VM
+      ![](https://i.imgur.com/VM8tRFP.png)
+      
+      b. Hit 'Continue' and then 'Import'
+      
+      c. Double click on the new appliance to start the VM - a new option in the VirtualBox list.
   
-![](https://i.imgur.com/VM8tRFP.png)
 
 4. Log in using the password &#39;machinelearning&#39;
 
@@ -50,8 +63,25 @@ Installing the virtual machine
 
 _Like magic, you have the tool on your virtual machine!_
 
+## Installing QGIS
 
-**Project Setup**
+QGIS is a great tool for loading the airbus dataset and performing the processing required to chop the data into a format that can be used for machine learning classification tasks.
+
+**MAC**
+
+1. from the QGIS download page it will redirect you to another web page where you can download the tool.
+
+      ![](https://i.imgur.com/VM8tRFP.png)
+
+2. 
+
+**Windows**
+
+
+
+At this stage an assumption will be made that you have the repository cloned in whatever permutation you prefer (VM / no VM)
+
+## Project Setup
 
 1. With the repo cloned you&#39;ll need to change directory into vision-processing-web-tool
 2. Set up a virtual environment to work in using the command &#39;virtualenv vision-processing&#39; in the terminal.
