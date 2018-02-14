@@ -1,20 +1,33 @@
-# vision-processing-web-tool
+# Vision Processing Tool / QGIS: setup
 
 Hey!
 
 So, you want to use the Kainos computer vision tool to do some detection in your satellite images? Great! Let me help you get setup.
 
-If you get stuck, feel free to grab Jordan McDonald (I will be floating around) to get some help.
+If you get stuck, feel free to grab Jordan McDonald (He will be floating around) to get some help.
 
 
-**Pre-requisites**
+## Pre-requisites
 
 1. Download Oracle Virtualbox and its extension from [here](https://www.virtualbox.org/wiki/Downloads) 
 
       a. This will host our virtual machine (so you don&#39;t have to deal with pesky dependencies!) 
-  
+      
       b. Ensure you have free hard drive space (30gb)
-2. Once you have it installed, download the Virtual machine image from [here](https://kainossoftwareltd.sharepoint.com/:u:/r/sites/appliedinnovation/Shared%20Documents/projects/space-lecture/space-hack.ova?csf=1&amp;e=6fQOpy)
+      
+2. Once you have it installed, download the Virtual machine image from here - ADD HERE.
+
+3. Download QGIS from [here] (https://qgis.org/en/site/forusers/download.html)
+
+4. Download the Airbus dataset from here - ADD HERE
+
+
+Once you have all these things downloaded, lets focus on getting each of them setup - if you are confident in handling python dependencies feel free to ignore using the virtual machine and clone this repository directly.
+
+Installing the virtual machine
+
+
+
 3. Open the image with Virtual Box 
 
       a. File – Import Appliance – then select your downloaded VM
