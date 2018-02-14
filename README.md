@@ -101,31 +101,33 @@ You can only open the space images with a tool like QGIS - previews wont work as
 
 !["How to crop a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.24.07.png?raw=true)
 
-At this stage an assumption will be made that you have the repository cloned in whatever permutation you prefer (VM / no VM)
-
 ## Project Setup
 
+At this stage an assumption will be made that you have the repository cloned in whatever permutation you prefer (VM / no VM)
+
 1. With the repo cloned you&#39;ll need to change directory into vision-processing-web-tool
-2. Set up a virtual environment to work in using the command &#39;virtualenv vision-processing&#39; in the terminal.
-3. activate the virtual environment (see read me in foler if unsure)
-4. Change directory into web-app and run &#39;pip install –r requirements.txt&#39;
-  
-      a. This grabs our dependencies
-  
-5. Once that&#39;s done you can run the app with &#39;python app.py&#39;
-6. I&#39;d recommend downloading chromium to view the web app
-7. On your browser of choice go to localhost:5000 to get to the web app
-8. After you&#39;ve opened the web app you can select images, tag them and train your own machine learning model and test it yourself!
 
-**Adding data**
+2. To setup - check out the read me file in the parent folder for the project - follow each step.
 
-- Get the dataset you want to use in the virtual machine
-- From there you can upload them on the website to append them
-- However, if you need to add a lot of images at once put them in the directory /web-app/static/images/uploads/untagged
+3. On your browser of choice go to localhost:5000 to get to the web app
+
+      a. I recommend downloading chrome as the browser (most tested)
+
+4. After you&#39;ve opened the web app you can select images, tag them and train your own machine learning model and test it yourself!
+
+### Adding Data to the Tool
+
+1. Ensure you have your dataset in a single folder.
+
+2. Can you upload the data through the tool using the 'upload' functionality.
+
+3. If you want to move a lot of images at once (or seeing upload issues) you can manually put them in the directory /web-app/static/images/uploads/untagged
 
 **Tips**
+
 1. Make sure your images have different names - we use the name as an ID (for the visoon too!
-2. To 'reset' and delete all the images / tags you will need delete the named tags (not the untagged folder) in these directories.
+
+2. To 'reset' and delete all the images / tags you will need delete the named tag folders (not the untagged folder) in these directories.
 
 - webapp/static/images/uploads
 - webapp/tensorflow_images/master
@@ -135,10 +137,12 @@ At this stage an assumption will be made that you have the repository cloned in 
 The images when trained will be split in training and validation sets.
 
 3. If you want to change the tool, please create a new branch and dont merge into master (keep this clean for everyones benefit)
-4. If you dont need the VM / have experience handling python depedencies, feel free not to use it! :)
+
 5. machine-learning.py is where you can tweak the key ML components (epochs etc)
-6. the algorithm chosen is a 'binary_crossentropy' so if using > 2 labels - then switch this to something suited to this.
+
+6. the algorithm chosen is a 'binary_crossentropy' so if using > 2 labels - then switch this to something smore suited to > 2 labels.
+
 7. ensure you change the 'settings.py' files size inputs to be as close as possible to the input (while maintaining a square)
+      a if in doubt scale down rather up up (to amount features becoming blocky pixels)
+
 8. In preprocessing we rescale inputs to between 0-1 for all pixel values - this is a great explanation why its useful - https://www.linkedin.com/pulse/keras-image-preprocessing-scaling-pixels-training-adwin-jahn/
-9. Keras handles the CNN part of the code - if you see some weird quirks, please do upgrade using pip in the venv.
-10. I recommend using QGIS outside of the VM to avoid loading large images into memory - leverage the VM as a means to use the vision processing tool.
