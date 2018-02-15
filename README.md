@@ -107,7 +107,7 @@ You can only open the space images with a tool like QGIS - previews wont work as
 
 !["How to open a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.15.48.png?raw=true)
 
-      a. Or you can drag it into the workspace window
+  a. Or you can drag it into the workspace window
 
 2. On the tool bar click on Raster - extraction - clipper.
 
