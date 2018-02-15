@@ -87,9 +87,10 @@ QGIS is a great tool for loading the airbus dataset and performing the processin
 
       ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-14%20at%2016.50.52.png)
       
-3. Add more here...
-
-MORE TO ADD
+3. Double click to run each of the installers, 1-4, in order one at a time.
+      a. The installer will look like the image below - keep hititng continue / agree to proceed.
+      
+      ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/installs.png)
 
 **Windows**
 
@@ -158,3 +159,7 @@ The images when trained will be split in training and validation sets.
 7. In preprocessing we rescale inputs to between 0-1 for all pixel values - this is a great explanation why its useful - https://www.linkedin.com/pulse/keras-image-preprocessing-scaling-pixels-training-adwin-jahn/
 
 8. You will not be able to connect a usb to the VM - if you know a solution please do inform an organiser.
+
+9. If you have an issues installing the requirements.txt file you should update these two dependencies:
+      - numpy==1.14.0
+      - scipy==1.0.0
