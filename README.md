@@ -23,7 +23,7 @@ If you get stuck, feel free to grab Jordan McDonald (He will be floating around)
 
 4. Download the Airbus dataset from here - ADD HERE
 
-      a. As mentioned above its recommended to do your dataset processing outside of the VM
+      a. As mentioned above its recommended to do your dataset processing outside of the VM (large images can stress system memory, particulary in a VM!)
       
       b. You can upload a processed dataset to the likes and Google drive and then download in the VM when you need the tool.
       
@@ -53,9 +53,13 @@ This section will take you through installing the virtual machine which will hos
 
       a. It might be slow loading the login page.
       
-5. The first thing you need to do in the virtual machine is set up your ssh key for your github account. Here&#39;s how to [generate the key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+5. If you want to change the tool and upload to your own repository (currently you have read access only), there a few steps you will need to take.
+
+      a.Set up your ssh key for your github account. Here&#39;s how to [generate the key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
       
-      a. Or you can do it any other way your familiar with!
+      b. Or you can do it any other way your familiar with!
+      
+Only do step six if your not using the VM (its already cloned!)      
       
 6. Now that that&#39;s set up you can clone the repo into the virtual machine (in the command line!)
 
@@ -137,10 +141,6 @@ At this stage an assumption will be made that you have the repository cloned in 
 - webapp/tensorflow_images/split/validation
 
 The images when trained will be split in training and validation sets.
-
-3. If you want to change the tool and upload to your own repository, there a few steps you will need to take.
-
-      a.
 
 4. machine-learning.py is where you can tweak the key ML components (epochs etc)
 
