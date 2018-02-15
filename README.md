@@ -53,9 +53,9 @@ This section will take you through installing the virtual machine which will hos
 
       a. It might be slow loading the login page.
       
-5. If you want to change the tool and upload to your own repository (currently you have read access only), there a few steps you will need to take.
+5. If you want to change the tool and upload to your own repository (currently you have read access only), there a few steps you will need to take (Otherwise skip this step!)
 
-      a.Set up your ssh key for your github account. Here&#39;s how to [generate the key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+      a. Set up your ssh key for your github account. Here&#39;s how to [generate the key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
       
       b. Or you can do it any other way your familiar with! 
       
