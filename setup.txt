@@ -1,3 +1,14 @@
+use this instructions to setup the tool!
+
+a) Using the terminal navigate to the folder of the vision processing tool (on the desktop)
+b) source 'vision-tool/bin/activate'
+c) cd webapp
+d) python app.py
+
+-----
+
+If you are setting up from scratch (not required unless something goes wrong)
+
 a) in vision processing tool folder (parent)
 b) virtualenv 'vision-tool'
 c) source 'vision-tool/bin/activate'
