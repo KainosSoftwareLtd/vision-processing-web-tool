@@ -107,6 +107,8 @@ At this stage an assumption will be made that you have the repository cloned in 
 
 1. With the repo cloned you&#39;ll need to change directory into vision-processing-web-tool
 
+      a.The repository is already cloned for you in the VM!
+
 2. To setup - check out the 'setup.txt' file in the parent folder for the project - follow each step.
 
 3. On your browser of choice go to localhost:5000 to get to the web app
