@@ -88,6 +88,7 @@ QGIS is a great tool for loading the airbus dataset and performing the processin
       ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-14%20at%2016.50.52.png)
       
 3. Double click to run each of the installers, 1-4, in order one at a time.
+
       a. The installer will look like the image below - keep hititng continue / agree to proceed.
       
       ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/installs.png)
@@ -105,6 +106,8 @@ You can only open the space images with a tool like QGIS - previews wont work as
 1. Load your image into QGIS
 
 !["How to open a satellite image"](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-13%20at%2009.15.48.png?raw=true)
+
+      a. Or you can drag it into the workspace window
 
 2. On the tool bar click on Raster - extraction - clipper.
 
