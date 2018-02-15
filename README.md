@@ -89,7 +89,7 @@ QGIS is a great tool for loading the airbus dataset and performing the processin
       
 3. Double click to run each of the installers, 1-4, in order one at a time.
 
-      a. The installer will look like the image below - keep hititng continue / agree to proceed.
+      a. The installer will look like the image below - keep hitting continue / agree to proceed.
       
       ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/installs.png)
 
@@ -130,6 +130,10 @@ At this stage an assumption will be made that you have the repository cloned in 
       a. I recommend downloading chrome as the browser (most tested)
 
 4. After you&#39;ve opened the web app you can select images, tag them and train your own machine learning model and test it yourself!
+
+NOTE:
+
+If you want to fork the project and make changes you should add your own Github details (especially in the VM!) - use whatever approach you prefer.
 
 ### Adding Data to the Tool
 
