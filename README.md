@@ -136,15 +136,17 @@ At this stage an assumption will be made that you have the repository cloned in 
 
 The images when trained will be split in training and validation sets.
 
-3. If you want to change the tool, please create a new branch and dont merge into master (keep this clean for everyones benefit)
+3. If you want to change the tool and upload to your own repository, there a few steps you will need to take.
 
-5. machine-learning.py is where you can tweak the key ML components (epochs etc)
+      a.
 
-6. the algorithm chosen is a 'binary_crossentropy' so if using > 2 labels - then switch this to something smore suited to > 2 labels.
+4. machine-learning.py is where you can tweak the key ML components (epochs etc)
 
-7. ensure you change the 'settings.py' files size inputs to be as close as possible to the input (while maintaining a square)
+5. the algorithm chosen is a 'binary_crossentropy' so if using > 2 labels - then switch this to something smore suited to > 2 labels.
+
+6. ensure you change the 'settings.py' files size inputs to be as close as possible to the input (while maintaining a square)
       a if in doubt scale down rather up up (to amount features becoming blocky pixels)
 
-8. In preprocessing we rescale inputs to between 0-1 for all pixel values - this is a great explanation why its useful - https://www.linkedin.com/pulse/keras-image-preprocessing-scaling-pixels-training-adwin-jahn/
+7. In preprocessing we rescale inputs to between 0-1 for all pixel values - this is a great explanation why its useful - https://www.linkedin.com/pulse/keras-image-preprocessing-scaling-pixels-training-adwin-jahn/
 
-9. You will not be able to connect a usb to the VM - if you know a solution please do inform an organiser.
+8. You will not be able to connect a usb to the VM - if you know a solution please do inform an organiser.
