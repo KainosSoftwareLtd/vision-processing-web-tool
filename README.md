@@ -57,13 +57,13 @@ This section will take you through installing the virtual machine which will hos
 
       a.Set up your ssh key for your github account. Here&#39;s how to [generate the key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
       
-      b. Or you can do it any other way your familiar with!
+      b. Or you can do it any other way your familiar with! 
       
-Only do step six if your not using the VM (its already cloned!)      
-      
-6. Now that that&#39;s set up you can clone the repo into the virtual machine (in the command line!)
+6. Only do step six if your not using the VM (its already cloned!)
 
-      a. &#39;git clone https://github.com/KainosSoftwareLtd/vision-processing-web-tool.git&#39'
+      a. Now that that&#39;s set up you can clone the repo into the virtual machine (in the command line!)
+
+      b. &#39;git clone https://github.com/KainosSoftwareLtd/vision-processing-web-tool.git&#39'
 
 _Like magic, you have the tool on your virtual machine!_
 
