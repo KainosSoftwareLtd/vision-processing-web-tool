@@ -23,7 +23,7 @@ If you get stuck, feel free to grab Jordan McDonald (He will be floating around)
       
 2. Once you have it installed, download the Virtual machine image from here - ADD HERE.
 
-3. Download QGIS from [here] (https://qgis.org/en/site/forusers/download.html)
+3. Download QGIS from [here](https://qgis.org/en/site/forusers/download.html)
 
       a. This is for viewing and cropping the dataset (recommended to do this outside the VM to avoid memory / storage issues)
 
@@ -63,7 +63,9 @@ This section will take you through installing the virtual machine which will hos
 
       a. Set up your ssh key for your github account. Here&#39;s how to [generate the key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
       
-      b. Or you can do it any other way your familiar with! 
+      b. Then do an SSH clone - 'git clone git@github.com:KainosSoftwareLtd/vision-processing-web-tool.git'
+      
+      c. Or you can do it any other way your familiar with! 
       
 6. Only do step six if your not using the VM (its already cloned!)
 
