@@ -27,7 +27,7 @@ If you get stuck, feel free to grab Jordan McDonald (He will be floating around)
       
       b. You can upload a processed dataset to the likes and Google drive and then download in the VM when you need the tool.
       
-      c. Inside the dataset is a read me describing the strcture of the data - each image is connected to an XML file which           contains the coordinate information - they come as a pair, so keep the images and XML together.
+      c. Inside the dataset is a read me describing the structure of the data - each image is connected to an XML file which           contains the coordinate information - they come as a pair, so keep the images and XML together.
 
 
 Once you have all these things downloaded, lets focus on getting each of them setup - if you are confident in handling python dependencies feel free to ignore using the virtual machine and clone this repository directly.
@@ -107,7 +107,7 @@ At this stage an assumption will be made that you have the repository cloned in 
 
 1. With the repo cloned you&#39;ll need to change directory into vision-processing-web-tool
 
-2. To setup - check out the read me file in the parent folder for the project - follow each step.
+2. To setup - check out the 'setup.txt' file in the parent folder for the project - follow each step.
 
 3. On your browser of choice go to localhost:5000 to get to the web app
 
@@ -146,3 +146,5 @@ The images when trained will be split in training and validation sets.
       a if in doubt scale down rather up up (to amount features becoming blocky pixels)
 
 8. In preprocessing we rescale inputs to between 0-1 for all pixel values - this is a great explanation why its useful - https://www.linkedin.com/pulse/keras-image-preprocessing-scaling-pixels-training-adwin-jahn/
+
+9. You will not be able to connect a usb to the VM - if you know a solution please do inform an organiser.
