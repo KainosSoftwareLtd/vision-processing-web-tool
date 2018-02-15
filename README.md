@@ -13,7 +13,13 @@ If you get stuck, feel free to grab Jordan McDonald (He will be floating around)
 
       a. This will host our virtual machine (so you don&#39;t have to deal with pesky dependencies!) 
       
-      b. Go ahead and install it (should be pretty straight forward!)
+      b. Go ahead and install Virtual Box (should be pretty straight forward!)
+      
+2. Once you have Virtaul Box installed - lets install the extension! it lets you do extra things (full screen functionality, potential usb transfer and more)
+
+      a. in Virtual Box navigate to preferences - select the extensions tab - hit the breen arrow and navigate to the downloaded extension pack.
+      
+      ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-15%20at%2012.47.48.png)
       
 2. Once you have it installed, download the Virtual machine image from here - ADD HERE.
 
