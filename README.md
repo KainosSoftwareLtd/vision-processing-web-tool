@@ -6,6 +6,8 @@ So, you want to use the Kainos computer vision tool to do some detection in your
 
 If you get stuck, feel free to grab Jordan McDonald (He will be floating around) to get some help.
 
+If you missed Jordans tutorial lecture - please check it out https://youtu.be/3M3fxN_nX8I
+
 
 ## Pre-requisites
 
@@ -27,7 +29,7 @@ If you get stuck, feel free to grab Jordan McDonald (He will be floating around)
 
       a. This is for viewing and cropping the dataset (recommended to do this outside the VM to avoid memory / storage issues)
 
-4. Download the Airbus dataset from here - ADD HERE
+4. Download the Airbus dataset from here - (Optical) https://t.co/14lCO2bSoo - (Sensor) http://bit.ly/2Gz1MSt 
 
       a. As mentioned above its recommended to do your dataset processing outside of the VM (large images can stress system memory, particulary in a VM!)
       
