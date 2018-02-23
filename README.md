@@ -23,7 +23,7 @@ If you missed Jordans tutorial lecture - please check it out https://youtu.be/3M
       
       ![](https://github.com/KainosSoftwareLtd/vision-processing-web-tool/blob/master/Screen%20Shot%202018-02-15%20at%2012.47.48.png)
       
-2. Once you have it installed, download the Virtual machine image from here - ADD HERE.
+2. Once you have it installed, download the Virtual machine image from [here](https://kainossoftwareltd-my.sharepoint.com/:u:/g/personal/petergo_kainos_com/EXyY5Eg-pNdFvXqs0YzNZmQBmdRDH8rchoyw7be3Zdcj1g).
 
 3. Download QGIS from [here](https://qgis.org/en/site/forusers/download.html)
 
