@@ -9,6 +9,22 @@ If you get stuck, feel free to grab Jordan McDonald (He will be floating around)
 If you missed Jordans tutorial lecture - please check it out https://youtu.be/3M3fxN_nX8I
 
 
+## Windows QGIS Fix - Andrew Fletcher (please thank him)
+
+0) Make sure to install the 64-bit version of QGIS from https://qgis.org/en/site/forusers/download.html#.
+
+The first pair of options.
+ 
+1) Download the GDAL Windows Binary from GISInternals -> http://www.gisinternals.com/query.html?content=filelist&file=release-1911-x64-gdal-2-2-3-mapserver-7-0-7.zip
+ 
+2) Extract the ZIP file.
+ 
+3) From the extracted folder, copy everything in bin/gdal/apps to C:\OSGeo4W64\bin. Replace any files in the destination.
+ 
+4) From the extracted folder, copy all the DLLs in  except zlib1.dll from bin to C:\OSGeo4W64\bin
+ 
+5) Run QGis. It *will* throw errors but these can be ignored.
+
 ## Pre-requisites
 
 1. Download Oracle Virtualbox and its extension from [here](https://www.virtualbox.org/wiki/Downloads) 
